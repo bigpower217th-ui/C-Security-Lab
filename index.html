@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Örgüye Dahil Herşey | El Emeği Mağazası</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #fff5f8; text-align: center; margin: 0; padding: 0; color: #333; scroll-behavior: smooth; }
+        .announcement-bar { background: linear-gradient(90deg, #ff0000, #ff5e5e); color: white; padding: 12px 0; font-weight: bold; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .header { background-color: #ff75a0; color: white; padding: 40px 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .social-buttons { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-top: 20px; }
+        .yt-link { background-color: #ff0000; padding: 10px 20px; border-radius: 50px; text-decoration: none; font-weight: bold; color: white; font-size: 0.9em; }
+        .ig-link { background-color: #e1306c; padding: 10px 20px; border-radius: 50px; text-decoration: none; font-weight: bold; color: white; font-size: 0.9em; }
+        .tt-link { background-color: #000000; padding: 10px 20px; border-radius: 50px; text-decoration: none; font-weight: bold; color: white; font-size: 0.9em; border: 1px solid #fff; }
+        #basket-icon { position: fixed; top: 150px; right: 20px; background: white; border: 2px solid #ff75a0; color: #ff75a0; padding: 10px 15px; border-radius: 50px; font-weight: bold; z-index: 1001; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .container { display: flex; flex-direction: column; align-items: center; gap: 30px; padding: 40px 15px; }
+        .card { background: white; border-radius: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.06); width: 100%; max-width: 350px; overflow: hidden; border: 1px solid #ffe0eb; position: relative; }
+        .price-tag { position: absolute; top: 15px; right: 15px; background: #d63031; color: white; padding: 8px 18px; border-radius: 20px; font-weight: bold; z-index: 10; }
+        .img-container { width: 100%; height: 350px; overflow: hidden; background: #eee; }
+        .card img { width: 100%; height: 100%; object-fit: cover; }
+        .card-info { padding: 20px; }
+        .btn-group { display: flex; gap: 10px; margin-top: 15px; }
+        .add-basket { background-color: #ff75a0; color: white; padding: 12px; border-radius: 12px; font-weight: bold; flex: 1; border: none; cursor: pointer; }
+        .buy-btn { background-color: #2ecc71; color: white; padding: 12px; border-radius: 12px; text-decoration: none; font-weight: bold; flex: 1; display: inline-block; }
+        @media (min-width: 768px) { .container { flex-direction: row; flex-wrap: wrap; justify-content: center; } .card { width: 320px; } }
+        .footer { padding: 40px; background: #2d3436; color: white; margin-top: 50px; }
+    </style>
+</head>
+<body>
+
+    <div id="basket-icon">🛒 Sepetim: <span id="sepet-sayi">0</span></div>
+
+    <div class="announcement-bar">
+        <marquee>🌸 EL EMEĞİ LİFLER VE PATİKLER ● SİPARİŞ İÇİN INSTAGRAM'DAN YAZIN</marquee>
+    </div>
+
+    <div class="header">
+        <h1>🧶 Örgüye Dahil Herşey</h1>
+        <p>Zeynep Hanım'dan 2026 Koleksiyonu</p>
+        <div class="social-buttons">
+            <a href="https://www.youtube.com/@örgüyedahilherşey" target="_blank" class="yt-link">▶ YouTube</a>
+            <a href="https://www.instagram.com/zeyno.7466102" target="_blank" class="ig-link">📷 Instagram</a>
+            <a href="https://www.tiktok.com/@zeynosumm12345" target="_blank" class="tt-link">🎵 TikTok</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="card"><div class="price-tag">200 TL</div><div class="img-container"><img src="https://i.ibb.co/ksqCmJHK/70c0e9b97d2218469ad1edc9221c70c8-0.jpg"></div><div class="card-info"><h3>Mor Çiçekli Lif</h3><div class="btn-group"><button class="add-basket" onclick="sepeteEkle()">Sepete Ekle</button><a href="https://www.instagram.com/zeyno.7466102" target="_blank" class="buy-btn">Sipariş Ver</a></div></div></div>
+        <div class="card"><div class="price-tag">200 TL</div><div class="img-container"><img src="https://i.ibb.co/Y7cCBkcN/MG-20251217-121721-499.jpg"></div><div class="card-info"><h3>Beyaz Desenli Lif</h3><div class="btn-group"><button class="add-basket" onclick="sepeteEkle()">Sepete Ekle</button><a href="https://www.instagram.com/zeyno.7466102" target="_blank" class="buy-btn">Sipariş Ver</a></div></div></div>
+        <div class="card"><div class="price-tag">200 TL</div><div class="img-container"><img src="https://i.ibb.co/Vc0DXGMT/MG-20260108-211343-049.jpg"></div><div class="card-info"><h3>Çiçekli Tığ İşi Lif</h3><div class="btn-group"><button class="add-basket" onclick="sepeteEkle()">Sepete Ekle</button><a href="https://www.instagram.com/zeyno.7466102" target="_blank" class="buy-btn">Sipariş Ver</a></div></div></div>
+        <div class="card"><div class="price-tag">600 TL</div><div class="img-container"><img src="https://i.ibb.co/BKYLWHD7/MG-20251213-173019-728.jpg"></div><div class="card-info"><h3>Mor Desenli Patik</h3><div class="btn-group"><button class="add-basket" onclick="sepeteEkle()">Sepete Ekle</button><a href="https://www.instagram.com/zeyno.7466102" target="_blank" class="buy-btn">Sipariş Ver</a></div></div></div>
+        <div class="card"><div class="price-tag">300 TL</div><div class="img-container"><img src="https://i.ibb.co/YTQdb7R6/MG-20260122-WA0008.jpg"></div><div class="card-info"><h3>Sarı Çiçekli Patik</h3><div class="btn-group"><button class="add-basket" onclick="sepeteEkle()">Sepete Ekle</button><a href="https://www.instagram.com/zeyno.7466102" target="_blank" class="buy-btn">Sipariş Ver</a></div></div></div>
+        <div class="card"><div class="price-tag">200 TL</div><div class="img-container"><img src="https://i.ibb.co/hF96m2QX/Gemini-Generated-mage-xay9s8xay9s8xay9.png"></div><div class="card-info"><h3>Krem İnci Lif</h3><div class="btn-group"><button class="add-basket" onclick="sepeteEkle()">Sepete Ekle</button><a href="https://www.instagram.com/zeyno.7466102" target="_blank" class="buy-btn">Sipariş Ver</a></div></div></div>
+        <div class="card"><div class="price-tag">300 TL</div><div class="img-container"><img src="https://i.ibb.co/8DmphD0S/image.jpg"></div><div class="card-info"><h3>Çiçekli Siyah Patik</h3><div class="btn-group"><button class="add-basket" onclick="sepeteEkle()">Sepete Ekle</button><a href="https://www.instagram.com/zeyno.7466102" target="_blank" class="buy-btn">Sipariş Ver</a></div></div></div>
+        <div class="card"><div class="price-tag">300 TL</div><div class="img-container"><img src="https://i.ibb.co/jPFjrdL6/MG-20260112-215053-620.webp"></div><div class="card-info"><h3>Özel Tasarım Patik</h3><div class="btn-group"><button class="add-basket" onclick="sepeteEkle()">Sepete Ekle</button><a href="https://www.instagram.com/zeyno.7466102" target="_blank" class="buy-btn">Sipariş Ver</a></div></div></div>
+        <div class="card"><div class="price-tag">600 TL</div><div class="img-container"><img src="https://i.ibb.co/vvsWf2H9/20251209-195937.jpg"></div><div class="card-info"><h3>Desenli El Emeği Patik</h3><div class="btn-group"><button class="add-basket" onclick="sepeteEkle()">Sepete Ekle</button><a href="https://www.instagram.com/zeyno.7466102" target="_blank" class="buy-btn">Sipariş Ver</a></div></div></div>
+        <div class="card"><div class="price-tag">300 TL</div><div class="img-container"><img src="https://i.ibb.co/yB85dYxJ/image.jpg"></div><div class="card-info"><h3>Çiçekli Pembe Patik</h3><div class="btn-group"><button class="add-basket" onclick="sepeteEkle()">Sepete Ekle</button><a href="https://www.instagram.com/zeyno.7466102" target="_blank" class="buy-btn">Sipariş Ver</a></div></div></div>
+        <div class="card"><div class="price-tag">300 TL</div><div class="img-container"><img src="https://i.ibb.co/5hc4Rt3Y/img.jpg"></div><div class="card-info"><h3>Tunus İşi Patik</h3><div class="btn-group"><button class="add-basket" onclick="sepeteEkle()">Sepete Ekle</button><a href="https://www.instagram.com/zeyno.7466102" target="_blank" class="buy-btn">Sipariş Ver</a></div></div></div>
+    </div>
+
+    <div class="footer">
+        <p>© 2026 Örgüye Dahil Herşey | El Emeği Tasarımlar</p>
+        <img src="https://hitwebcounter.com/counter/counter.php?page=orguyedahilhersey_yeni&style=0005&nbdigits=5&type=page&initCount=0" border="0">
+    </div>
+
+    <script>
+        let s = 0;
+        function sepeteEkle() {
+            s++;
+            document.getElementById('sepet-sayi').innerText = s;
+            alert('Ürün sepete eklendi! Ziyaretçilerimizle TikTok\'ta da buluşalım!');
+        }
+    </script>
+</body>
+</html>
