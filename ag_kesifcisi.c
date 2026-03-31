@@ -3,7 +3,7 @@
 #include <string.h>
 
 int main () {
-
+// burayı kendi IP ne göre değiştir //
 char ag_miks[16] = "192.168.1";
 char komut[100];
 
