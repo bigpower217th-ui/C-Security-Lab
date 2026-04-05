@@ -14,7 +14,7 @@
 
 ---
 
-### 📩 Contact for Pricing / İletişim ve Fiyatlandırma
+### 📩 Contact for Pricing / İletişim
 
 **Any custom C code can be written specifically for your needs.** *İhtiyaçlarınıza özel her türlü C kodu profesyonelce yazılır.*
 
